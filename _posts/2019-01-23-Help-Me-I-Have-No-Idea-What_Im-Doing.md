@@ -4,10 +4,8 @@ title: "Help Me: I Have No Idea What I'm Doing"
 date: 2019-03-23 20:00:00 +0000
 ---
 
-This is my first time blogging, so please be gentle with me - after all, I have
-no idea what I'm doing.
-
----
+*This is my first time blogging, so please be gentle with me - after all, I have
+no idea what I'm doing.*
 
 I recently started thinking again about a project idea that I've had for quite
 a while, and before I make too much progress I though I would start writing
@@ -23,7 +21,7 @@ terrain.
 Now when I tell you I'm also rather interested in space, you may see where this
 is headed.
 
-- My goal is to create a real-time, planetary-scale voxel terrain engine.
+> My goal is to create a real-time, planetary-scale voxel terrain engine.
 
 When I say "planetary-scale", I'm talking somewhere in the realms of
 [Kerbal Space Program](ksp)'s 1/10th scale up to real solar system scale.
