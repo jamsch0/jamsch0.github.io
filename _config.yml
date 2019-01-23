@@ -1,0 +1,8 @@
+title: Blog
+email: jchapman3000@gmail.com
+baseurl: ""
+url: ""
+github_username: jchapman127
+
+markdown: kramdown
+theme: minima
