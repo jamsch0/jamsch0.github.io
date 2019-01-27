@@ -6,3 +6,5 @@ github_username: jchapman127
 
 markdown: kramdown
 theme: minima
+
+show_excerpts: true
