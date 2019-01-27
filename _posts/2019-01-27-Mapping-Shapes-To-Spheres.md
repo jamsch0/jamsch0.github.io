@@ -28,7 +28,7 @@ scene.add(sphere);
 
 This will result in wireframe mesh that looks something like this:
 
-{% include image name="sphere-wireframe.png" caption="A UV sphere wireframe" %}
+{% include image.html name="sphere-wireframe.png" caption="A UV sphere wireframe" %}
 
 This kind of spherical mesh can cause issues when UV mapping a texture onto
 them, as they have a much higher texel density around the poles. To get around
@@ -64,7 +64,7 @@ subdivision.
 
 This produces the following mesh:
 
-{% include image name="icosphere-mesh.png" caption="An icosphere mesh" %}
+{% include image.html name="icosphere-mesh.png" caption="An icosphere mesh" %}
 
 The icosphere is a good fit for our search criteria as it consists entirely of
 equilateral triangles that are congruent, that is, they are all the same size.
@@ -106,7 +106,7 @@ scene.add(new THREE.Mesh(geometry, wireframe));
 
 Which results in something like this:
 
-{% include image name="spherical-cube-mesh.png" caption="A mesh of a cube mapped to a sphere" %}
+{% include image.html name="spherical-cube-mesh.png" caption="A mesh of a cube mapped to a sphere" %}
 
 Using a cube is quite a popular technique as it is relatively simple and can
 produce decent results. There is quite a large amount of distortion occurring
@@ -142,7 +142,7 @@ scene.add(new THREE.Mesh(geometry, wireframe));
 
 The results are shown below:
 
-{% include image name="spherical-cube-mesh-improved-mapping.png" caption="A mesh of a cube mapped to a sphere using an improved algorithm" %}
+{% include image.html name="spherical-cube-mesh-improved-mapping.png" caption="A mesh of a cube mapped to a sphere using an improved algorithm" %}
 
 There is still definitely some distortion of the squares at the cube corners,
 however this algorithm produces squares with more uniform sizes when compared
@@ -155,7 +155,7 @@ simpler to work with when building systems on top of it.
 Here's a procedurally generated moon cube texture applied to this sphere, to
 whet your appetites!
 
-{% include image name="procedural-moon.png" caption="A procedurally generated moon using the improved cube to sphere mapping algorithm" %}
+{% include image.html name="procedural-moon.png" caption="A procedurally generated moon using the improved cube to sphere mapping algorithm" %}
 
 ## Conclusion
 
