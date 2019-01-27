@@ -8,7 +8,7 @@ date: 2019-01-27 23:00:00 +0000
 series of posts.*
 
 To render a planet or moon, you're probably going to need to be able to render
-a sphere. Or maybe an [oblate spheroid], but one step at a time, eh?.
+a sphere. Or maybe an [oblate spheroid], but one step at a time, eh?
 
 ## Rectangles
 
