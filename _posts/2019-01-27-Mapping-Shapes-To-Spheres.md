@@ -26,7 +26,7 @@ const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 ```
 
-This will result in wireframe mesh that looks something like this:
+This will result in a wireframe mesh that looks something like this:
 
 {% include image.html name="sphere-wireframe.png" caption="A UV sphere wireframe" %}
 
@@ -38,13 +38,13 @@ regions far larger than they really are. Rectangles just don't map particularly
 well to spheres without distortion or stretching, as cartographers well know.
 
 For planetary terrain, we'll need something that can divide the surface into
-roughly equally sized segments, regardless of position.
+roughly equally sized segments, regardless of their position.
 
 ## Icosahedra
 
-One alternative is the icosahedron. By sub-dividing, or tessellating, the shape
+One alternative is the icosahedron. By subdividing, or tessellating, the shape
 a few times and normalising the vertices to the surface of a sphere, we end up
-with a rather convincing sphere. This is sometimes referred to as a
+with a rather convincing sphere. This is sometimes referred to as an
 'icosphere'. In *three.js* the [`IcosahedronGeometry`] constructor can handle
 this for us by taking an optional `detail` parameter.
 
@@ -164,8 +164,8 @@ differences. Moving forward, I will be using the variant of cube mapping that I
 talked about last, as this strikes a good balance between complexity and
 quality.
 
-Next time, I will probably dive into level of detail (LOD) techniques, as this
-will is vital to rendering large areas of terrain in real time. So please stay
+Next time, I will probably dive into level of detail (LOD) techniques, as they
+are vital to rendering large areas of terrain in real time. So please stay
 tuned for that!
 
 [first post]: https://jchapman127.github.io/2019/01/23/Help-Me-I-Have-No-Idea-What_Im-Doing.html
