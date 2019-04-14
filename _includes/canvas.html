@@ -59,6 +59,7 @@
                 const script = document.createElement("script");
                 script.async = true;
                 script.src = "/{{ scriptPath }}/{{ include.script }}";
+                script.type = "module";
 
                 script.onerror = () => {
                     wrapper.removeChild(script);

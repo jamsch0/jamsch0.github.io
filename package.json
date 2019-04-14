@@ -4,6 +4,8 @@
   "author": "James Chapman <jchapman3000@gmail.com>",
   "private": true,
   "devDependencies": {
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.9.3",
     "typescript": "^3.4.3"
   },
   "dependencies": {
