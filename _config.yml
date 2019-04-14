@@ -3,6 +3,10 @@ email: jchapman3000@gmail.com
 baseurl: ""
 url: ""
 github_username: jchapman127
+twitter_username: jchapman127
 
 markdown: kramdown
 theme: minima
+
+exclude:
+  - node_modules

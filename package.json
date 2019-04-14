@@ -1,0 +1,12 @@
+{
+  "name": "jchapman127.github.io",
+  "version": "0.0.0",
+  "author": "James Chapman <jchapman3000@gmail.com>",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "three": "^0.103.0"
+  }
+}

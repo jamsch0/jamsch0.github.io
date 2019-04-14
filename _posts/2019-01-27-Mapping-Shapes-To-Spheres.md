@@ -28,7 +28,13 @@ scene.add(sphere);
 
 This will result in a wireframe mesh that looks something like this:
 
-{% include image.html name="sphere-wireframe.png" caption="A UV sphere wireframe" %}
+{% include canvas.html
+    id="uv-sphere-wireframe"
+    script="uv-sphere-wireframe.js"
+    source="uv-sphere-wireframe.ts"
+    image="uv-sphere-wireframe.png"
+    caption="A UV sphere wireframe"
+%}
 
 This kind of spherical mesh can cause issues when UV mapping a texture onto
 them, as they have a much higher texel density around the poles. To get around
@@ -106,7 +112,10 @@ scene.add(new THREE.Mesh(geometry, wireframe));
 
 Which results in something like this:
 
-{% include image.html name="spherical-cube-mesh.png" caption="A mesh of a cube mapped to a sphere" %}
+{% include image.html
+    name="spherical-cube-mesh.png"
+    caption="A mesh of a cube mapped to a sphere"
+%}
 
 Using a cube is quite a popular technique as it is relatively simple and can
 produce decent results. There is quite a large amount of distortion occurring
@@ -142,7 +151,10 @@ scene.add(new THREE.Mesh(geometry, wireframe));
 
 The results are shown below:
 
-{% include image.html name="spherical-cube-mesh-improved-mapping.png" caption="A mesh of a cube mapped to a sphere using an improved algorithm" %}
+{% include image.html
+    name="spherical-cube-mesh-improved-mapping.png"
+    caption="A mesh of a cube mapped to a sphere using an improved algorithm"
+%}
 
 There is still definitely some distortion of the squares at the cube corners,
 however this algorithm produces squares with more uniform sizes when compared
@@ -155,7 +167,10 @@ simpler to work with when building systems on top of it.
 Here's a procedurally generated moon cube texture applied to this sphere, to
 whet your appetites!
 
-{% include image.html name="procedural-moon.png" caption="A procedurally generated moon using the improved cube to sphere mapping algorithm" %}
+{% include image.html
+    name="procedural-moon.png"
+    caption="A procedurally generated moon using the improved cube to sphere mapping algorithm"
+%}
 
 ## Conclusion
 

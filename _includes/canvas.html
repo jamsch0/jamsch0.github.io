@@ -1,0 +1,80 @@
+{% capture pagePath %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %}
+{% capture imagePath %}assets/img/{{ pagePath }}{% endcapture %}
+{% capture scriptPath %}assets/src/{{ pagePath }}{% endcapture %}
+
+<style>
+    .canvas-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .canvas-wrapper canvas {
+        background-color: black;
+        background-image: url("/{{ imagePath }}/{{ include.image }}");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+    .canvas-wrapper .source-link {
+        background-color: rgba(255, 255, 255, 0.7);
+        border-bottom-left-radius: 4px;
+        padding: 2px 8px;
+        position: absolute;
+        right: 0;
+    }
+    .canvas-wrapper .play-button {
+        background-color: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .canvas-wrapper .play-button div {
+        background-color: inherit;
+        border-color: transparent transparent transparent white;
+        border-style: solid;
+        border-width: 37px 0 37px 74px;
+    }
+    .canvas-wrapper[data-loaded="false"] {
+        cursor: pointer;
+    }
+    .canvas-wrapper:not([data-loaded="false"]) .play-button {
+        display: none;
+    }
+</style>
+
+<figure>
+    <div class="canvas-wrapper" data-loaded="false">
+        <canvas id="{{ include.id }}"></canvas>
+        <span class="source-link">
+            <a href="https://github.com/jchapman127/jchapman127.github.io/blob/master/{{ scriptPath }}/{{ include.source }}">
+                View source
+            </a>
+        </span>
+        <div class="play-button">
+            <div></div>
+        </div>
+        <script>
+            const wrapper = document.getElementById("{{ include.id }}").parentElement;
+            const onClick = () => {
+                const script = document.createElement("script");
+                script.async = true;
+                script.src = "/{{ scriptPath }}/{{ include.script }}";
+
+                script.onerror = () => {
+                    wrapper.removeChild(script);
+                    wrapper.addEventListener("click", onClick);
+                };
+
+                script.onload = () =>
+                    wrapper.setAttribute("data-loaded", "true");
+
+                wrapper.appendChild(script);
+                wrapper.removeEventListener("click", onClick);
+            };
+            wrapper.addEventListener("click", onClick);
+        </script>
+    </div>
+{% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+{% endif %}
+</figure>
